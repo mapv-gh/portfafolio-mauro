@@ -171,7 +171,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/mapv-gh/evoluciones-pokemon",
-    webapp: "",
+    webapp: "https://poke-api-flame-iota.vercel.app/",
   },
   {
     id: 2,
