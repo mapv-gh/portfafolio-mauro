@@ -170,7 +170,7 @@ export const projects = [
       "React Js",
     ],
     category: "web app",
-    github: "https://github.com/mapv-gh/evoluciones-pokemon",
+    github: "https://github.com/mapv-gh/poke-api",
     webapp: "https://poke-api-flame-iota.vercel.app/",
   },
   {
