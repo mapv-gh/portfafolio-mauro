@@ -246,7 +246,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
               project?.github === "" ?  <ButtonDisabled  disabled target="new">Ver Código</ButtonDisabled> : <Button dull href={project?.github} target="new">Ver Código</Button>
             }
             {
-              project?.webapp === "" ?  <ButtonDisabled  disabled target="new">Ver DEMO</ButtonDisabled> : <Button dull href={project?.github} target="new">Ver DEMO</Button>
+              project?.webapp === "" ?  <ButtonDisabled  disabled target="new">Ver DEMO</ButtonDisabled> : <Button dull href={project?.webapp} target="new">Ver DEMO</Button>
             }
             
           </ButtonGroup>
