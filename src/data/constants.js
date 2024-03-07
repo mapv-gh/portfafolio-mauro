@@ -7,7 +7,7 @@ export const Bio = {
     "Programmer",
   ],
   description:
-    "I am a motivated and autonomous person, always eager to take on new challenges and new experiences. With a great passion for learning, I strive to provide high quality results. With a positive attitude and growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "Soy una persona motivada y autónoma, siempre con ganas de asumir nuevos retos y nuevas experiencias. Con una gran pasión por aprender, me esfuerzo por brindar resultados de excelente calidad. Con una actitud positiva y una mentalidad de crecimiento, estoy listo para contribuir de manera significativa y lograr grandes cosas.",
   github: "https://github.com/mapv-gh",
   resume:
     "https://drive.google.com/file/d/1Iy4T18Mtv0I-QJqKf6_jINm_B7MTlIG5/view?usp=drive_link",
@@ -129,10 +129,10 @@ export const experiences = [
   {
     id: 0,
     img: "https://i.ibb.co/ZcT4k2p/dicotex.png",
-    role: "Developer full stack web/mobile  ",
+    role: "Desarrollador full stack web/mobile  ",
     company: "DICOTEX",
     date: "Jul 2023 - Sep 2023",
-    desc: "This project represents the development of an advanced IT incident management platform specifically designed to meet the needs of multiple locations throughout Chile. The platform focuses on the creation of an efficient system that allows not only the detailed registration and monitoring of each computer problem by location, but also the integration of key functionalities to optimize the resolution of incidents through an intuitive system based on the reception of Emails or manually, users can generate tickets that represent different IT problems identified at each location. These tickets can be enriched with the addition of files, images and detailed comments, providing a clear and complete view of each situation. In addition, the platform offers the possibility of scheduling technical visits for on-site intervention, adjusting the status of tickets as the solution progresses, and assigning specific products that are necessary to solve the problem, such as printers, keyboards or power supplies. , among others. Every action, from ticket generation to final problem resolution, is meticulously recorded in a central database, ensuring a complete and accessible history of all incidents. This functionality not only facilitates efficient and orderly management of IT problems, but also allows for detailed analysis of technical support needs and trends over time. The implementation of this platform transforms the way organizations approach IT incident management, significantly improving communication, operational efficiency and customer satisfaction by ensuring quick and effective responses to their technological needs.",
+    desc: "Desarrollé de una aplicación web y una aplicación móvil de Gestión de Incidentes del Departamento de TI, diseñada específicamente para tener registro de todos los problemas en todos los locales de Chile. Funciones de la aplicación web/móvil: Creación de tickets 0",
     skills: [
       "HTML",
       "CSS",
@@ -149,10 +149,10 @@ export const education = [
   {
     id: 0,
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Logo_UTFSM.png/680px-Logo_UTFSM.png",
-    school: "Federico Santa Maria Technical University",
+    school: "Universidad Técnica Federico Santa Maria",
     date: "Mar 2021 - Oct 2023",
-    desc: "I graduated from this beautiful career, where I learned data structures, agile methodologies, design patterns, data analysis, web and mobile programming",
-    degree: "Universitary Technician in Computer Science",
+    desc: "Egresé de esta hermosa carrera e institución, donde aprendí Estructuras de Datos, Metodologías ágiles, Patrones de diseño, Análisis de Datos  y Programacion Web/Móvil.",
+    degree: "Técnico Universitario en Informatica",
   },
 
 ];
@@ -161,26 +161,26 @@ export const projects = [
   {
     id: 1,
     title: "Pokedex",
-    date: "Jan 2024",
+    date: "Enero 2024",
     description:
-      "This project features an advanced Pokedex designed to offer a comprehensive exploration of the vast diversity of Pokémon. It is characterized by its ability to show not only the evolutions of each Pokémon, but also a detailed set of individual characteristics of each one.",
+      "Este proyecto presenta una Pokedex avanzada diseñada para ofrecer una exploración de la gran diversidad de ¡Pokémon!",
     image:
     "https://i.ibb.co/Ky3ZXys/pokedex.png",
     tags: [
       "React Js",
     ],
     category: "web app",
-    github: "https://github.com/mapv-gh/evoluciones-pokemon",
+    github: "https://github.com/mapv-gh/poke-api",
     webapp: "https://poke-api-flame-iota.vercel.app/",
   },
   {
     id: 2,
-    title: "Inventory management and purchase/sales history",
+    title: "Gestión de Inventario y Registro de Compras/Ventas",
     date: "Dic 2023",
     description:
-      "This project consists of the development of a mobile application designed to optimize inventory management and commercial operations of small and medium-sized companies. The application offers a comprehensive solution for the registration and tracking of items in inventory, as well as the efficient management of purchases, sales, suppliers and vendors. Through a friendly and intuitive interface, users can access advanced functions that allow detailed product administration, stock control, analysis of purchase-sale movements and management of relationships with suppliers and sellers. Implementing cutting-edge technology, the application ensures precision in data management and facilitates strategic decision making, promoting operational efficiency and contributing to the commercial success of its users.",
+      "Este proyecto consiste en el desarrollo de una aplicación móvil diseñada para optimizar la gestión de inventarios y operaciones comerciales de pequeñas y medianas empresas. La aplicación ofrece una solución integral para el registro y seguimiento de artículos en inventario, así como la gestión eficiente de compras, ventas, proveedores y vendedores. A través de una interfaz amigable e intuitiva, los usuarios pueden acceder a funciones avanzadas que permiten la administración detallada de productos, control de stock, análisis de movimientos de compra-venta y gestión de relaciones con proveedores y vendedores. Implementando tecnología de punta, la aplicación asegura precisión en la gestión de datos y facilita la toma de decisiones estratégicas, promoviendo la eficiencia operativa y contribuyendo al éxito comercial de sus usuarios.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+      "",
     tags: [
       "Flutter",
     ],

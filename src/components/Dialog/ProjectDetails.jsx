@@ -2,6 +2,7 @@ import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
+import ImgProject from '../../images/nodispo.jpg'
 
 const Container = styled.div`
   width: 100%;
@@ -71,16 +72,6 @@ const Image = styled.img`
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 `;
 
-const Label = styled.div`
-  font-size: 20px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-  margin: 8px 6px;
-  @media only screen and (max-width: 600px) {
-    font-size: 16px;
-    margin: 8px 6px;
-  }
-`;
 
 const Tags = styled.div`
   display: flex;
@@ -150,7 +141,23 @@ const ButtonGroup = styled.div`
   margin: 12px 0px;
   gap: 12px;
 `;
-
+const ButtonDisabled = styled.button`
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  color: ${({ theme }) => theme.text_primary};
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.text_secondary};
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
 const Button = styled.a`
   width: 100%;
   text-align: center;
@@ -163,10 +170,10 @@ const Button = styled.a`
   ${({ dull, theme }) =>
     dull &&
     `
-        background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
+        background-color: ${theme.primary};
+        color: ${theme.text_primary};
         &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
+            background-color: ${({ theme }) => theme.text_primary};
         }
     `}
   cursor: pointer;
@@ -182,6 +189,7 @@ const Button = styled.a`
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+  const imgM = project?.image === "" ? ImgProject: project?.image;
   return (
     <Modal
       open={true}
@@ -198,7 +206,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             }}
             onClick={() => setOpenModal({ state: false, project: null })}
           />
-          <Image src={project?.image} />
+          <Image src={imgM} />
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
           <Tags>
@@ -209,7 +217,6 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
           <Desc>{project?.description}</Desc>
           {project.member && (
             <>
-              <Label>Members</Label>
               <Members>
                 {project?.member.map((member) => (
                   <Member>
@@ -235,12 +242,13 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
             </>
           )}
           <ButtonGroup>
-            <Button dull href={project?.github} target="new">
-              View Code
-            </Button>
-            <Button href={project?.webapp} target="new">
-              View Live App
-            </Button>
+            {
+              project?.github === "" ?  <ButtonDisabled  disabled target="new">Ver Código</ButtonDisabled> : <Button dull href={project?.github} target="new">Ver Código</Button>
+            }
+            {
+              project?.webapp === "" ?  <ButtonDisabled  disabled target="new">Ver DEMO</ButtonDisabled> : <Button dull href={project?.github} target="new">Ver DEMO</Button>
+            }
+            
           </ButtonGroup>
         </Wrapper>
       </Container>

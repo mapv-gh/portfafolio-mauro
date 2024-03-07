@@ -12,7 +12,7 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import ProjectDetails from "./components/Dialog/ProjectDetails";
 import { useState } from "react";
-import Fab from '@mui/material/Fab';
+import Button from '@mui/material/Fab';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -25,35 +25,28 @@ const Body = styled.div`
 
 const Wrapper = styled.div`
   padding-bottom: 100px;
-  background: linear-gradient(
-      38.73deg,
-      rgba(204, 0, 187, 0.15) 0%,
-      rgba(201, 32, 184, 0) 50%
-    ),
-    linear-gradient(
-      141.27deg,
-      rgba(0, 70, 209, 0) 50%,
-      rgba(0, 70, 209, 0.15) 100%
-    );
+  background:  linear-gradient(180deg, rgba(255,255,255,0) 85%, rgba(10,78,139,0.47102591036414565) 100%);
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
-const fabStyle = {
-  position: 'fixed',
-  bottom: 35,
-  right: 35,
-};
-const fab = {
-    sx: fabStyle,
-  };
+
 
 function App() {
-  const [isTheme, setisTheme] = useState(true)
+  const [isTheme, setisTheme] = useState(false)
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   const themeB = isTheme ? lightTheme: darkTheme ;
   const Icon = isTheme ?  WbSunnyIcon: DarkModeIcon;
- 
+  const fabStyle = {
+    position: 'fixed',
+    bottom: 35,
+    right: 35,
+    color: themeB.text_primary,
+    background: themeB.button
+  };
+  const fab = {
+      sx: fabStyle,
+    };
   const handleClick = () =>{
     setisTheme(!isTheme)
   }
@@ -87,7 +80,7 @@ function App() {
             </div>
             
           </AnimatePresence>
-          <Fab sx={fab.sx} size={fab.size} color="primary" onClick={handleClick}><Icon/></Fab>
+          <Button sx={fab.sx} size={fab.size}  onClick={handleClick}><Icon/></Button>
         </Body>
       </BrowserRouter>
     </ThemeProvider>

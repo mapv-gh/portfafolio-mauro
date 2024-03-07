@@ -75,11 +75,11 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <Nav>
-          <NavLink href="#About">About</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
-          <NavLink href="#Education">Education</NavLink>
+          <NavLink href="#About">Sobre mi</NavLink>
+          <NavLink href="#Skills">Habilidades</NavLink>
+          <NavLink href="#Experience">Experiencia</NavLink>
+          <NavLink href="#Projects">Proyectos</NavLink>
+          <NavLink href="#Education">Educación</NavLink>
         </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.linkedin} target="display">

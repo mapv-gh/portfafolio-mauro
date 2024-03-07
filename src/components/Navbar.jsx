@@ -3,6 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
+
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
   height: 80px;
@@ -62,6 +63,7 @@ const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
+  display: flex;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   &:hover {
@@ -121,7 +123,7 @@ const MobileMenu = styled.ul`
   list-style: none;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
+  background: ${({ theme }) => theme.card};
   position: absolute;
   top: 80px;
   right: 0;
@@ -151,46 +153,46 @@ const Navbar = ({setThemeApp}) => {
         </MobileIcon>
 
         <NavItems>
-          <NavLink href="#About">About</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
-          <NavLink href="#Education">Education</NavLink>
+          <NavLink href="#About">Sobre&nbsp;mi</NavLink>
+          <NavLink href="#Skills">Habilidades</NavLink>
+          <NavLink href="#Experience">Experiencia</NavLink>
+          <NavLink href="#Projects">Proyectos</NavLink>
+          <NavLink href="#Education">Educación</NavLink>
         </NavItems>
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
-              About
+              Sobre&nbsp;mi
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
-              Skills
+              Habilidades
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
-              Experience
+              Experiencia
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
-              Projects
+              Proyectos
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
-              Education
+              Educación
             </NavLink>
             <GithubButton
               href={Bio.github}
               target="_Blank"
               style={{
-                background: theme.primary,
+                background: "transparent",
                 color: theme.text_primary,
               }}
             >
-              Github Profile
+              Github
             </GithubButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
           <GithubButton href={Bio.github} target="_Blank">
-            Github Profile
+            Github
           </GithubButton>
         </ButtonContainer>
       </NavbarContainer>

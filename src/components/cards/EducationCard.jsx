@@ -72,24 +72,24 @@ const EducationCard = ({ education }) => {
           width="100%"
           height="100%"
           alt={education.school}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
+          style={{ borderRadius: "50%", objectFit: "cover", background: "white"}}
           src={education.img}
         />
       }
+      iconStyle={{ background: 'white'}}
       contentStyle={{
         display: "flex",
         flexDirection: "column",
         gap: "12px",
-        background: "#1d1836",
-        color: "#fff",
-        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+        color: theme.text_primary,
+        boxShadow: "rgb(136, 216, 246, 0.25) 0px 5px 24px",
         // backdropFilter: "blur(3px) saturate(106%)",
         backgroundColor: theme.card,
         border: "1px solid rgba(255, 255, 255, 0.125)",
-        borderRadius: "6px",
       }}
       contentArrowStyle={{
-        borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
+        borderRight: "7px solid"+ theme.text_primary,
+        
       }}
       date={education.date}
     >

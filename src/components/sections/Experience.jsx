@@ -4,7 +4,6 @@ import { experiences } from "../../data/constants";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import ExperienceCard from "../cards/ExperienceCard";
-import HeroImage2 from '../../images/HeroImage2.png';
 
 const Container = styled.div`
 margin-top: 100px;
@@ -51,30 +50,21 @@ const Desc = styled.div`
   }
 `;
 
-const Imagen= styled.img`
-  width:300px;
-  &:hover{
-    transform: scale(80px);
-  }
-}
-`;
 
 const Experience = () => {
   const theme = useTheme();
   return (
     <Container id="Experience">
       <Wrapper>
-        <Title>Experience</Title>
+        <Title>Experiencia</Title>
         <Desc
           style={{
             marginBottom: "40px",
           }}
         >
-          My work experience as a software engineer and working on different
-          companies and projects.
+          
         </Desc>
         
-        <Imagen src={HeroImage2}/>
         <VerticalTimeline lineColor={theme.text_primary}>
           {experiences.map((experience, index) => (
             <ExperienceCard

@@ -73,6 +73,11 @@ const Skills = styled.div`
 `;
 const Skill = styled.div`
   font-size: 15px;
+  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2px 7px;
+  border-radius: 13px;
+
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
   @media only screen and (max-width: 768px) {
@@ -134,7 +139,11 @@ const ExperienceCard = ({ experience }) => {
               <b>Skills:</b>
               <ItemWrapper>
                 {experience?.skills?.map((skill, index) => (
-                  <Skill>• {skill}</Skill>
+                  <>
+                  {index === 0 ? '' : '•'}
+                    <Skill>{skill}  </Skill>
+                  </>
+                 
                 ))}
               </ItemWrapper>
             </Skills>

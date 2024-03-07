@@ -9,6 +9,7 @@ import {
   headContentAnimation,
   headTextAnimation,
 } from "../../utils/motion";
+import { FileDownload } from "@mui/icons-material";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -137,7 +138,10 @@ const ResumeButton = styled.a`
   max-width: 300px;
   text-align: center;
   padding: 16px 0;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   background: hsla(271, 100%, 50%, 1);
   background: linear-gradient(
     225deg,
@@ -224,10 +228,9 @@ const Hero = () => {
             <HeroLeftContainer>
               <motion.div {...headTextAnimation}>
                 <Title>
-                  Hi, I am <br /> {Bio.name}
+                  Hola, yo soy <br /> {Bio.name}
                 </Title>
                 <TextLoop>
-                  I am a
                   <Span>
                     <Typewriter
                       options={{
@@ -245,7 +248,8 @@ const Hero = () => {
               </motion.div>
 
               <ResumeButton href={Bio.resume} target="_blank">
-                Check Resume
+                <FileDownload />
+                Currículum
               </ResumeButton>
             </HeroLeftContainer>
             <HeroRightContainer>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ImgProject from '../../images/nodispo.jpg'
 
 const Card = styled.div`
   width: 330px;
@@ -57,7 +58,7 @@ const Title = styled.div`
   overflow: hidden;
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -78,7 +79,7 @@ const Description = styled.div`
   margin-top: 8px;
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 `;
@@ -104,9 +105,10 @@ const Button = styled.a`
 `;
 
 const ProjectCard = ({ project, setOpenModal }) => {
+  const imgM = project?.image === "" ? ImgProject: project?.image;
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} />
+      <Image src={imgM} />
       <Tags>
         {project.tags?.map((tag, index) => (
           <Tag>{tag}</Tag>

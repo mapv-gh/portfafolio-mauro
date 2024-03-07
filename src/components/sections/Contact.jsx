@@ -42,16 +42,7 @@ const Title = styled.div`
   }
 `;
 
-const Desc = styled.div`
-  font-size: 18px;
-  text-align: center;
-  max-width: 600px;
-  color: ${({ theme }) => theme.text_secondary};
-  @media (max-width: 768px) {
-    margin-top: 12px;
-    font-size: 16px;
-  }
-`;
+
 const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
@@ -65,13 +56,7 @@ const ContactForm = styled.form`
   margin-top: 28px;
   gap: 12px;
 `;
-const ContactTitle = styled.div`
-  font-size: 28px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  align-self: center;
-  color: ${({ theme }) => theme.text_primary};
-`;
+
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
@@ -158,12 +143,8 @@ const Contact = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>Contact</Title>
-        <Desc>
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
+        <Title>Contacto</Title>
         <ContactForm onSubmit={handleSubmit}>
-          <ContactTitle>Email Me </ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
