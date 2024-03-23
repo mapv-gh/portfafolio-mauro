@@ -201,6 +201,6 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/mapv-gh/Gato-tik-tak-toe",
-    webapp: "https://gato-tik-tak-toe.vercel.app/",
+    webapp: "https://gato-tik-tak-toe.vercel.app",
   },
 ];
