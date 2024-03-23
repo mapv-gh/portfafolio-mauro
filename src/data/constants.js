@@ -193,7 +193,7 @@ export const projects = [
     title: "Gato (tik-tak-toe)",
     date: "Febrero 2024",
     description:
-      "Este proyecto presenta una juego tradicional Tik-tak-toe",
+      "Juego tradicional Tik-tak-toe",
     image:
     "https://i.ibb.co/JCvbN3Y/gato.png",
     tags: [
