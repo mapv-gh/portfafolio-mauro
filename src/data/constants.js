@@ -203,4 +203,19 @@ export const projects = [
     github: "https://github.com/mapv-gh/Gato-tik-tak-toe",
     webapp: "https://gato-tik-tak-toe.vercel.app",
   },
+  {
+    id: 3,
+    title: "Movie Finder",
+    date: "Febrero 2024",
+    description:
+      "App web para ver un buscador de peliculas online.",
+    image:
+    "https://i.ibb.co/Y8cdKnf/image-demo.png",
+    tags: [
+      "React Js",
+    ],
+    category: "web app",
+    github: "https://github.com/mapv-gh/movie-finder",
+    webapp: "",
+  },
 ];
