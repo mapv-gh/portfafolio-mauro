@@ -188,4 +188,19 @@ export const projects = [
     github: "",
     webapp: "",
   },
+  {
+    id: 3,
+    title: "Gato (tik-tak-toe)",
+    date: "Febrero 2024",
+    description:
+      "Este proyecto presenta una juego tradicional Tik-tak-toe",
+    image:
+    "https://i.ibb.co/JCvbN3Y/gato.png",
+    tags: [
+      "React Js",
+    ],
+    category: "web app",
+    github: "https://github.com/mapv-gh/Gato-tik-tak-toe",
+    webapp: "https://gato-tik-tak-toe.vercel.app/",
+  },
 ];
